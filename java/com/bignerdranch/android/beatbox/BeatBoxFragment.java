@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * BeatBox fragment hosted by BeatBoxActivity
- *test
+ *
  * Created by Rudolf on 3/8/2016.
  */
 public class BeatBoxFragment extends Fragment {
@@ -33,6 +33,7 @@ public class BeatBoxFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);    // Keeps BeatBox instance alive across configuration changes
 
         mBeatBox = new BeatBox(getActivity());
     }
@@ -54,12 +55,18 @@ public class BeatBoxFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mBeatBox.release();             // To clean up memory used by SoundPool
+    }
+
     /**
      * ViewHolder subclass
      *
      * Purpose: To hold a BeatBox button containing a Sound object
      */
-    private class SoundHolder extends RecyclerView.ViewHolder {
+    private class SoundHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private Button mButton;
         private Sound mSound;
@@ -68,11 +75,17 @@ public class BeatBoxFragment extends Fragment {
             super(inflater.inflate(R.layout.list_item_sound, container, false));
 
             mButton = (Button) itemView.findViewById(R.id.list_item_sound_button);
+            mButton.setOnClickListener(this);
         }
 
         public void bindSound(Sound sound) {
             mSound = sound;
             mButton.setText(mSound.getName());
+        }
+
+        @Override
+        public void onClick(View v) {
+            mBeatBox.play(mSound);
         }
     }
 

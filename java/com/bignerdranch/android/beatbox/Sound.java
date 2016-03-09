@@ -7,6 +7,7 @@ public class Sound {
 
     private String mAssetPath;          // String Path
     private String mName;               // Name of Sound
+    private Integer mSoundId;           // Sound Integer ID
 
     public Sound(String assetPath) {
         mAssetPath = assetPath;
@@ -21,5 +22,13 @@ public class Sound {
 
     public String getName() {
         return mName;
+    }
+
+    public Integer getSoundId() {
+        return mSoundId;
+    }
+
+    public void setSoundId(Integer soundId) {
+        mSoundId = soundId;
     }
 }
