@@ -1,0 +1,8 @@
+[submodule "BeatBox"]
+	path = BeatBox
+	url = https://github.com/rpham64/BeatBox
+
+
+[submodule "Main"]
+	path = BeatBox/app/src/main
+	url = https://github.com/rpham64/BeatBox
