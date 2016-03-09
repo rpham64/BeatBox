@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * BeatBox fragment hosted by BeatBoxActivity
- *
+ *test
  * Created by Rudolf on 3/8/2016.
  */
 public class BeatBoxFragment extends Fragment {
@@ -95,7 +95,7 @@ public class BeatBoxFragment extends Fragment {
             return new SoundHolder(inflater, parent);
         }
 
-        /**test
+        /**
          * Binds ViewHolder to Sound
          *
          * @param soundHolder
