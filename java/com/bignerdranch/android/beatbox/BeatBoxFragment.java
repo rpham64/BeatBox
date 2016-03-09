@@ -95,7 +95,7 @@ public class BeatBoxFragment extends Fragment {
             return new SoundHolder(inflater, parent);
         }
 
-        /**
+        /**test
          * Binds ViewHolder to Sound
          *
          * @param soundHolder
