@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/green</item>
 
         <!-- Custom themes applied throughout the app -->
-        <item name="android:colorBackground">@color/soothing_blue</item>
+        <item name="android:colorBackground">@color/diamond_blue</item>
         <item name="android:buttonStyle">@style/BeatBoxButton</item>
     </style>
 
@@ -23,7 +23,7 @@
 
     <!-- Color for each BeatBox button -->
     <style name="BeatBoxButton" parent="android:style/Widget.Holo.Button">
-        <item name="android:background">@color/diamond_blue</item>
+        <item name="android:background">@drawable/button_beat_box</item>
     </style>
 
 </resources>
