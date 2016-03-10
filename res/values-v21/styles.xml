@@ -5,5 +5,19 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Custom themes applied throughout the app -->
+        <item name="android:colorBackground">@color/soothing_blue</item>
+        <item name="android:buttonStyle">@style/BeatBoxButton.Material</item>
+
     </style>
+
+    <style name="BeatBoxButton.Holo" parent="android:style/Widget.Holo.Button">
+        <item name="android:background">@color/light_blue</item>
+    </style>
+
+    <style name="BeatBoxButton.Material" parent="android:style/Widget.Material.Button">
+        <item name="android:background">@color/light_blue</item>
+    </style>
+
 </resources>
